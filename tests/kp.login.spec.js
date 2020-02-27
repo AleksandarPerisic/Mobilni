@@ -13,18 +13,18 @@ describe('Login test',function(){
     });
 
     it('Verify that right page is opened',async function(){
-        expect(browser.getCurrentUrl()).toEqual("https://www.kupujemprodajem.com/");
+        expect(await browser.getCurrentUrl()).toEqual("https://www.kupujemprodajem.com/");
     });
 
     it('Verify that sing in button works',async function(){
         await home.login.click();
-        expect(browser.getCurrentUrl()).toEqual("https://www.kupujemprodajem.com/user.php?action=login");
+        expect(await browser.getCurrentUrl()).toEqual("https://www.kupujemprodajem.com/user.php?action=login");
     }); 
 
     it('Veryfy that sing in user can log in',async function(){
         await singin.enterEmailandPassword();
         await singin.submit.click();
-        expect(browser.getCurrentUrl()).toEqual("https://www.kupujemprodajem.com/user.php?action=welcome");
+        expect(await browser.getCurrentUrl()).toEqual("https://www.kupujemprodajem.com/user.php?action=welcome");
     });
     
 });

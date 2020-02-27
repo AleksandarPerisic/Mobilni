@@ -10,7 +10,7 @@ describe('New product add test',function(){
     let ad = new adPage();
     var title="";
     var item_state="";
-    var id=browser.params.counter;
+    var id=1;
 
     it('Veryfy that last product is opened in new tab',async function(){
         let name = await user.productforopening(data,id);
@@ -26,7 +26,7 @@ describe('New product add test',function(){
         await user.switchToFirstTab();
         await browser.actions().keyUp(protractor.Key.COMMAND).perform();
         await user.newproduct.click();
-        expect(browser.getCurrentUrl()).toEqual("https://www.kupujemprodajem.com/oglasi.php?action=new");
+        expect(await browser.getCurrentUrl()).toEqual("https://www.kupujemprodajem.com/oglasi.php?action=new");
 
     });
 

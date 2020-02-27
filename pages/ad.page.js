@@ -24,7 +24,7 @@ let adPage=function(){
     this.bodyfinish=element(by.css('div[id="middleCol"]'));
 
     this.upload = async (naslov)  => {
-        let file='/Users/a.perisic/Desktop/KupujemProdajem/Mobiles/';
+        let file='/Users/a.perisic/Desktop/KP/Mobilni/Mobiles/';
         file=file+naslov+"/";
         for(let i=1;i<11;i++){
             let absolutePath=file+i.toString()+".jpg";
