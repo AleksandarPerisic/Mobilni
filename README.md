@@ -1,0 +1,2 @@
+# Mobilni
+kod za kupujemprodajem
