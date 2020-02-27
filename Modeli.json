@@ -1,0 +1,60 @@
+{
+    "product" : [
+    {
+        "id":"0",
+        "name" :"AKCIJA! Vernee Thor Plus -3GB -32GB -5800mAh"
+    },
+    {
+        "id":"1",
+        "name":"BV7000 PRO -4GB -64GB -3500mAh"
+    },
+    {
+        "id":"2",
+        "name":"Blackview BV7000 Pro -4GB -64GB -3500mAh OTPORNOST"
+    },
+    {
+        "id":"3",
+        "name":"Blackview BV8000 Pro -4GB -64GB -3500mAh OTPORNOST"
+    },
+    {
+        "id":"4",
+        "name":"Blackview BV6800 Pro -4GB -64GB -6580mAh OTPORNOST"
+    },
+    {
+        "id":"5",
+        "name":"Blackview P10000 Pro -4GB -64GB -11000mAh"
+    },
+    {
+        "id":"6",
+        "name":"Cubot King Kong -2GB -16GB -4400mAh OTPORNOST"
+    },
+    {
+        "id":"7",
+        "name":"Cubot Cheetah 2 -3GB -32GB -16MP -13MP"
+    },
+    {
+        "id":"8",
+        "name":"Blackview P10000 Pro -4GB -64GB -11000mAh"
+    },
+    {
+        "id":"9",
+        "name":"Blackview P10000 Pro -4GB -64GB -11000mAh"
+    },
+    {
+        "id":"10",
+        "name":"Blackview P10000 Pro -4GB -64GB -11000mAh"
+    },
+    {
+        "id":"11",
+        "name":"Blackview P10000 Pro -4GB -64GB -11000mAh"
+    },
+    {
+        "id":"12",
+        "name":"Blackview P10000 Pro -4GB -64GB -11000mAh"
+    },
+    {
+        "id":"13",
+        "name":"Blackview P10000 Pro -4GB -64GB -11000mAh"
+    }
+    ]
+}
