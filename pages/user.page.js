@@ -34,6 +34,7 @@ let userPage=function(){
     this.openproduct = async (name) =>{
         for(let i=0;i<await this.product.count();i++){
             if(name == await this.product.get(i).getText()){
+                await browser.sleep(3000);
                 await this.product.get(i).click();
             }
         }

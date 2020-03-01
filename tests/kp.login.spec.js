@@ -18,12 +18,13 @@ describe('Login test',function(){
 
     it('Verify that sing in button works',async function(){
         await home.login.click();
-        expect(await browser.getCurrentUrl()).toEqual("https://www.kupujemprodajem.com/user.php?action=login");
+        expect(await browser.getCurrentUrl()).toEqual("https://www.kupujemprodajem.com/user.php?action=welcome");
     }); 
 
     it('Veryfy that sing in user can log in',async function(){
         await singin.enterEmailandPassword();
         await singin.submit.click();
+        await browser.sleep(1000);
         expect(await browser.getCurrentUrl()).toEqual("https://www.kupujemprodajem.com/user.php?action=welcome");
     });
     

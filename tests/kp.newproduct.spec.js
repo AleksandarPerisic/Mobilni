@@ -15,6 +15,7 @@ describe('New product add test',function(){
     it('Veryfy that last product is opened in new tab',async function(){
         let name = await user.productforopening(data,id);
         await browser.actions().keyDown(protractor.Key.COMMAND).perform();
+        await browser.sleep(3000);
         await user.openproduct(name);
         await user.switchToSecondTab();
         await browser.wait(EC.visibilityOf(ad.adtitle),3000);

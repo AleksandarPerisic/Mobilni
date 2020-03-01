@@ -13,7 +13,7 @@ describe('New product add test',function(){
     var id=0;
 
     it('Veryfy that last product is opened in new tab',async function(){
-        for(let i=0;i<2;i++)
+        for(let i=0;i<3;i++)
         {
         console.log(i);
         console.log(id);
@@ -60,6 +60,7 @@ describe('New product add test',function(){
         await browser.wait(EC.visibilityOf(ad.bodyfinish),10000);
         await browser.sleep(1000);
         await browser.get("https://www.kupujemprodajem.com/user.php?action=welcome");
+        await browser.sleep(1000);
         let br=user.productfordelete();
         await browser.wait(EC.elementToBeClickable(user.deleteproduct.get(br)),3000);
         await user.deleteproduct.get(br).click();
