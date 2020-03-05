@@ -2,11 +2,11 @@
     "product" : [
     {
         "id":"0",
-        "name" :"AKCIJA! Vernee Thor Plus -3GB -32GB -5800mAh"
+        "name" :"Blackview BV5500 -2GB -16GB -4400mAh OTPORNOST"
     },
     {
         "id":"1",
-        "name":"BV7000 PRO -4GB -64GB -3500mAh"
+        "name":"Blackview BV6800 Pro -4GB -64GB -6580mAh OTPORNOST"
     },
     {
         "id":"2",
@@ -18,7 +18,7 @@
     },
     {
         "id":"4",
-        "name":"Blackview BV6800 Pro -4GB -64GB -6580mAh OTPORNOST"
+        "name":"Blackview A30 -2GB -16GB -5.5 -FaceID"
     },
     {
         "id":"5",
@@ -30,31 +30,43 @@
     },
     {
         "id":"7",
-        "name":"Cubot Cheetah 2 -3GB -32GB -16MP -13MP"
+        "name":"Cubot Cheetah 2 -3GB -32GB -16MP -13MP -3000mAh"
     },
     {
         "id":"8",
-        "name":"Blackview P10000 Pro -4GB -64GB -11000mAh"
+        "name":"Cubot Quest -4GB -64GB -4000mAh OTPORNOST"
     },
     {
         "id":"9",
-        "name":"Blackview P10000 Pro -4GB -64GB -11000mAh"
+        "name":"Doogee MIX -6GB -64GB -3380mAh -Helio P25"
     },
     {
         "id":"10",
-        "name":"Blackview P10000 Pro -4GB -64GB -11000mAh"
+        "name":"Elephone S7 -3GB -32GB -3000mAh -Helio x20"
     },
     {
         "id":"11",
-        "name":"Blackview P10000 Pro -4GB -64GB -11000mAh"
+        "name":"M-Horse Pure 1 -3GB -32GB -4380mAh"
     },
     {
         "id":"12",
-        "name":"Blackview P10000 Pro -4GB -64GB -11000mAh"
+        "name":"Umidigi Z2 -6GB -64GB -3580mAh"
     },
     {
         "id":"13",
-        "name":"Blackview P10000 Pro -4GB -64GB -11000mAh"
+        "name":"Leagoo T8s -4GB -32GB -3080mAh -8.1 Oreo"
+    },
+    {
+        "id":"14",
+        "name":"HomTom S7 -3GB -32GB -2900mAh"
+    },
+    {
+        "id":"15",
+        "name":"Oukitel K3 -4GB -64GB -6000mAh"
+    },
+    {
+        "id":"16",
+        "name":"Nomu M6 -2GB -16GB -3000mAh OTPORNOST"
     }
     ]
 }

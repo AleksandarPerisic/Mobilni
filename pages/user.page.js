@@ -34,7 +34,11 @@ let userPage=function(){
     this.openproduct = async (name) =>{
         for(let i=0;i<await this.product.count();i++){
             if(name == await this.product.get(i).getText()){
-                await browser.sleep(3000);
+                var scrolldown = this.product.get(i);
+                await browser.controlFlow().execute(function() {
+                     browser.executeScript('arguments[0].scrollIntoView(true)', scrolldown.getWebElement());
+                });
+                await browser.actions().keyDown(protractor.Key.CONTROL).perform();
                 await this.product.get(i).click();
             }
         }
