@@ -38,7 +38,7 @@ let userPage=function(){
                 await browser.controlFlow().execute(function() {
                      browser.executeScript('arguments[0].scrollIntoView(true)', scrolldown.getWebElement());
                 });
-                await browser.actions().keyDown(protractor.Key.CONTROL).perform();
+                await browser.actions().keyDown(protractor.Key.COMMAND).perform();
                 await this.product.get(i).click();
             }
         }

@@ -1,6 +1,6 @@
 let userPage = require('../pages/user.page.js');
 let adPage = require('../pages/ad.page.js');
-var remote = require('selenium-webdriver/remote');
+var remote = require('../node_modules/selenium-webdriver/remote');
 var data = require('../Modeli.json');
 var EC = protractor.ExpectedConditions;
 
@@ -10,12 +10,10 @@ describe('New product add test',function(){
     let ad = new adPage();
     var title="";
     var item_state="";
-    var id=1;
+    var id=10;
 
     it('Veryfy that last product is opened in new tab',async function(){
         let name = await user.productforopening(data,id);
-        await browser.actions().keyDown(protractor.Key.COMMAND).perform();
-        await browser.sleep(3000);
         await user.openproduct(name);
         await user.switchToSecondTab();
         await browser.wait(EC.visibilityOf(ad.adtitle),3000);
@@ -44,6 +42,7 @@ describe('New product add test',function(){
         let cena= await ad.adprice.getText();
         let text = await ad.adtext.getText();
         item_state = await ad.adstate.getText();
+        await user.closeSecondTab();
         await user.switchToFirstTab();
         await ad.name.sendKeys(title);
         await ad.price.sendKeys(ad.fprice(cena));

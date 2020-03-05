@@ -11,6 +11,10 @@ describe('Delete last product in list',function(){
 
     it('Delete last product',async function(){
         let br=user.productfordelete();
+        var scrolldown = user.product.get(br);
+        await browser.controlFlow().execute(function() {
+            browser.executeScript('arguments[0].scrollIntoView(true)', scrolldown.getWebElement());
+        });
         await browser.wait(EC.elementToBeClickable(user.deleteproduct.get(br)),3000);
         await user.deleteproduct.get(br).click();
         await browser.switchTo().frame(user.iframe.getWebElement());
