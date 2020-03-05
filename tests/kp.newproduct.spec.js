@@ -10,15 +10,21 @@ describe('New product add test',function(){
     let ad = new adPage();
     var title="";
     var item_state="";
+    var cena="";
+    var text="";
     var id=10;
 
     it('Veryfy that last product is opened in new tab',async function(){
-        let name = await user.productforopening(data,id);
-        await user.openproduct(name);
-        await user.switchToSecondTab();
-        await browser.wait(EC.visibilityOf(ad.adtitle),3000);
+        /*let name = */await user.productforopening(data,id);
+        //await user.openproduct(name);
+        //await user.switchToSecondTab();
+        //await browser.wait(EC.visibilityOf(ad.adtitle),3000);
         title=await ad.adtitle.getText();
-        expect(await user.productholder.getAttribute('class')).toEqual("oglas-holder");
+        cena= await ad.adprice.getText();
+        text = await ad.adtext.getText();
+        item_state = await ad.adstate.getText();
+        await user.closeSecondTab();
+        //expect(await user.productholder.getAttribute('class')).toEqual("oglas-holder");
     });
 
     it('Veryfy that page for new product is opened form home page', async function(){
@@ -38,12 +44,6 @@ describe('New product add test',function(){
     });
 
     it('Veryfy that title,price and text in second tab is copied in the new one', async function(){
-        await user.switchToSecondTab();
-        let cena= await ad.adprice.getText();
-        let text = await ad.adtext.getText();
-        item_state = await ad.adstate.getText();
-        await user.closeSecondTab();
-        await user.switchToFirstTab();
         await ad.name.sendKeys(title);
         await ad.price.sendKeys(ad.fprice(cena));
         await browser.switchTo().frame(ad.text.getWebElement());

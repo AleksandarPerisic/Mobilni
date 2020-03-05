@@ -1,4 +1,8 @@
 let userPage=function(){
+    var EC = protractor.ExpectedConditions;
+    let adPage = require('../pages/ad.page.js');
+    let ad = new adPage();
+
     this.product=element(by.css('div[class="adListContainer userAds"]')).all(by.css('a[class="adName"]'));
     this.productholder=element(by.css('div[id="oglas-holder"]'));
     this.deleteproduct=element(by.css('div[id="adTable"]')).all(by.css('a[rel1="lyteframe"]'));
@@ -8,9 +12,9 @@ let userPage=function(){
     this.diffrentreason=element(by.css('input[id="data[reason]other"]'));
     this.delete=element(by.css('input[name="submit[delete]"]'));
 
-    this.switchToSecondTab = async () => {
+    this.switchToSecondTab = async (br) => {
         let windows = await browser.getAllWindowHandles();
-        await browser.switchTo().window(windows[1]);
+        await browser.switchTo().window(windows[br]);
     };
 
     this.closeSecondTab = async () => {
@@ -18,20 +22,21 @@ let userPage=function(){
         await browser.close();
     };
 
-    this.switchToFirstTab = async () => {
+    this.switchToFirstTab = async (br) => {
         let windows = await browser.getAllWindowHandles();
-        await browser.switchTo().window(windows[0]);
+        await browser.switchTo().window(windows[br]);
     };
 
-    this.productforopening = async (testdata,id) =>{
+    this.productforopening = async (testdata,id,br) =>{
         for(let i=0;i<testdata.product.length;i++){
             if(id==testdata.product[i].id){
-                return testdata.product[i].name;
+                //return testdata.product[i].name;
+                await this.openproduct(testdata.product[i].name,br);
             }
         }
     };
 
-    this.openproduct = async (name) =>{
+    this.openproduct = async (name,br) =>{
         for(let i=0;i<await this.product.count();i++){
             if(name == await this.product.get(i).getText()){
                 var scrolldown = this.product.get(i);
@@ -40,6 +45,8 @@ let userPage=function(){
                 });
                 await browser.actions().keyDown(protractor.Key.COMMAND).perform();
                 await this.product.get(i).click();
+                await this.switchToSecondTab(br);
+                await browser.wait(EC.visibilityOf(ad.adtitle),3000);
             }
         }
     }

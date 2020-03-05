@@ -20,9 +20,9 @@ exports.config = {
     //chromeDriver: './chromedriver',
     capabilities:{
         browserName: 'chrome',
-        chromeOptions: {
+        /*chromeOptions: {
             args: ["--incognito"]
-        }
+        }*/
     },
 
 
@@ -40,9 +40,9 @@ exports.config = {
     // to protractor (in this example conf.js).
     // They may include glob patterns.
     specs: ['./tests/kp.login.spec.js',
-            //'./tests/kp.spec.js'
-            './tests/kp.newproduct.spec.js',
-            './tests/kp.delete.spec.js'
+            './tests/kp.spec.js'
+            //'./tests/kp.newproduct.spec.js',
+            //'./tests/kp.delete.spec.js'
     ],
 
 
