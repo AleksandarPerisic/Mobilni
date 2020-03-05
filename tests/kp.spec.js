@@ -78,6 +78,7 @@ describe('New product add test',function(){
         await browser.wait(EC.elementToBeSelected(user.diffrentreason),3000);
         await user.delete.click();
         id=id+1;
+        //ako bih zatvorio prvi da li bi se automacki prebacio na drugi tab
         await user.switchToSecondTab(i1);
     }
     });
